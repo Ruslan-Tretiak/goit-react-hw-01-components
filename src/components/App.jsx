@@ -1,22 +1,13 @@
-// export const App = () => {
-//   return (
-//     <div
-//       style={{
-//         height: '100vh',
-//         display: 'flex',
-//         justifyContent: 'center',
-//         alignItems: 'center',
-//         fontSize: 40,
-//         color: '#010101'
-//       }}
-//     >
-//       React homework template
-//     </div>
-//   );
-// };
+
 import React from 'react';
-import Profile from './Profile'; // Шлях до компонента Profile
-import user from '../components/user.json'; // Шлях до файлу з даними користувача
+import Profile from './Profile/Profile';
+import user from '../components/user.json';
+import Statistics from './Statistics/Statistics';
+import data from './Statistics/data.json';
+import FriendList from './Friends/FriendList';
+import friends from './Friends/friends.json'; 
+import TransactionHistory from './Transactions/TransactionHistory';
+import transactions from './Transactions/transactions.json';
 
 const App = () => {
   return (
@@ -28,8 +19,17 @@ const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
+
+      <Statistics title="Upload stats" stats={data} />
+
+      <FriendList friends={friends.slice(0, 5)} />
+
+      <TransactionHistory items={transactions} />
+
     </div>
   );
 };
 
 export default App;
+
+
