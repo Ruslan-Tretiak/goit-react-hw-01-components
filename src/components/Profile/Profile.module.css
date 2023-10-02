@@ -1,0 +1,46 @@
+
+.profile-style {
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+}
+
+.profile-style .description {
+  text-align: center;
+}
+
+.profile-style img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.profile-style .name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.profile-style .tag {
+  color: #666;
+  margin: 5px 0;
+}
+
+.profile-style .location {
+  color: #999;
+  margin: 5px 0;
+}
+
+.profile-style .stats {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.profile-style .label {
+  font-weight: bold;
+}
+
+.profile-style .quantity {
+  margin-left: 5px;
+}

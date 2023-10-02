@@ -1,35 +1,36 @@
 import React from "react";
 
-const profile = ({ avatar, username, tag, location, stats }) => {
-    return(
-    <div className="profile">
-        <div className="description">
-            <img
-                src={avatar}
-                alt="User avatar"
-                className="{username}"
-            />
-            <p className="name"> {username}</p>
-            <p className="tag">@{tag}</p>
-                <p className="location">{location}</p>
-        </div>
+import styles from './Profile.module.css'; 
 
-        <ul className="stats">
-            <li>
-                <span className="label">Followers</span>
-                <span className="quantity">{stats.followers}</span>
-            </li>
-            <li>
-                <span className="label">Views</span>
-                <span className="quantity">{stats.views}</span>
-            </li>
-            <li>
-                <span className="label">Likes</span>
-                <span className="quantity">{stats.likes}</span>
-            </li>
-        </ul>
-        </div>
-    )
-}
+const Profile = ({ avatar, username, tag, location, stats }) => {
+  return (
+    <div className={styles['profile-style']}> 
+      <div className={styles.description}>
+        <img
+          src={avatar}
+          alt="User avatar"
+          className={styles['username']}/>
+        <p className={styles.name}> {username}</p>
+        <p className={styles.tag}>@{tag}</p>
+        <p className={styles.location}>{location}</p>
+      </div>
 
-export default profile
+      <ul className={styles.stats}>
+        <li>
+          <span className={styles.label}>Followers</span>
+          <span className={styles.quantity}>{stats.followers}</span>
+        </li>
+        <li>
+          <span className={styles.label}>Views</span>
+          <span className={styles.quantity}>{stats.views}</span>
+        </li>
+        <li>
+          <span className={styles.label}>Likes</span>
+          <span className={styles.quantity}>{stats.likes}</span>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default Profile;

@@ -1,20 +1,30 @@
 import React from 'react';
+import styles from './Statistics.module.css';
 
 const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      <h2 className="title">{title}</h2>
+    <section className={styles.statistics}>
+      <h2 className={styles.title}>{title}</h2>
 
-      <ul className="stat-list">
-        {stats.map(stat => (
-          <li className="item" key={stat.id}>
-            <span className="label">{stat.label}</span>
-            <span className="percentage">{`${stat.percentage}%`}</span>
-          </li>
-        ))}
-      </ul>
+      <table className={styles['stat-table']}>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          {stats.map(stat => (
+            <tr className={styles.item} key={stat.id}>
+              <td className={styles.label}>{stat.label}</td>
+              <td className={styles.percentage}>{`${stat.percentage}%`}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </section>
   );
 };
 
 export default Statistics;
+
