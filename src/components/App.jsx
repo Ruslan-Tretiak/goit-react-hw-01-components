@@ -11,7 +11,7 @@ import transactions from './Transactions/transactions.json';
 
 const App = () => {
   return (
-    <div className= {StyleSheet.container}>
+    <div>
       <Profile
         username={user.username}
         tag={user.tag}
