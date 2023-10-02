@@ -1,7 +1,6 @@
 .statistics {
     text-align: center;
     margin-bottom: 20px;
-    width: 300px;
 }
 
 .title {
@@ -25,12 +24,12 @@
 }
 
 .item {
-    display: flex;
+    display: table-row;
 }
 
 .label,
 .percentage {
-    display: flex;
+    display: table-cell;
     font-weight: bold;
 }
 
