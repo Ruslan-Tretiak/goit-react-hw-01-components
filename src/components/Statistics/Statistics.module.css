@@ -1,11 +1,12 @@
-statistics {
+.statistics {
     text-align: center;
     margin-bottom: 20px;
+    width: 300px;
 }
 
 .title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.7em;
+    margin-bottom: 15px;
 }
 
 .stat-table {
@@ -24,12 +25,12 @@ statistics {
 }
 
 .item {
-    display: table-row;
+    display: flex;
 }
 
 .label,
 .percentage {
-    display: table-cell;
+    display: flex;
     font-weight: bold;
 }
 

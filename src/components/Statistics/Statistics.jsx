@@ -4,7 +4,7 @@ import styles from './Statistics.module.css';
 const Statistics = ({ title, stats }) => {
   return (
     <section className={styles.statistics}>
-      <h2 className={styles.title}>{title}</h2>
+      {title && <h2 className={styles.title}>{title}</h2>}
 
       <table className={styles['stat-table']}>
         <thead>
@@ -27,4 +27,3 @@ const Statistics = ({ title, stats }) => {
 };
 
 export default Statistics;
-
